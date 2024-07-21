@@ -29,13 +29,14 @@ namespace Magic_Land_Explorer
             {
                 if (duration == null) return 0;
 
-                // Use a regular expression to find the first integer in the string
+                //regular expression 
+                //: "82 minutes",
                 var match = Regex.Match(duration, @"\d+");
                 if (match.Success && int.TryParse(match.Value, out int minutes))
                 {
                     return minutes;
                 }
-                return 0; // or throw an exception if you prefer
+                return 0; 
             }
         }
     }
